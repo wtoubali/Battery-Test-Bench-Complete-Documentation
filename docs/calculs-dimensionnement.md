@@ -1,27 +1,33 @@
 # 📐 Dimensionnement & Calculs Théoriques
 
-## 1. Charge Active & Dissipation Thermique
+## 1. Charge Passive & Validation Thermique
 
-La charge active convertit l'énergie de la batterie en chaleur via un transistor MOSFET de puissance opérant en régime linéaire.
+La dissipation d'énergie est assurée par une résistance de puissance vitrifiée/bobinée de $R = 5\,\Omega$ ($10\text{ W}$ max). Le courant est commuté en tout-ou-rien (ou modulé) via un MOSFET de puissance.
 
-### Conditions défavorables (Pire cas)
-* Tension maximale cellule ($V_{max}$) : $4.2\text{ V}$ (Pleine charge)
-* Courant de décharge maximal ($I_{max}$) : $3.0\text{ A}$
-* Puissance maximale à dissiper :
-$$P_{max} = V_{max} \times I_{max} = 4.2\text{ V} \times 3.0\text{ A} = 12.6\text{ W}$$
+### Conditions de décharge (Pire cas - Batterie pleine)
+* Tension maximale cellule ($V_{max}$) : $4.2\text{ V}$
+* Résistance de charge ($R$) : $5.0\,\Omega$
 
-### Choix du dissipateur thermique (Radiateur)
-Afin de maintenir la température de jonction du MOSFET ($T_j$) en dessous de sa limite absolue ($150^\circ\text{C}$ max, cible de sécurité $\le 90^\circ\text{C}$) pour une température ambiante $T_a = 25^\circ\text{C}$ :
+#### Courant maximal ($I_{max}$) :
+$$I_{max} = \frac{V_{max}}{R} = \frac{4.2\text{ V}}{5.0\,\Omega} = 0.84\text{ A}$$
 
-$$R_{th,ja} \le \frac{T_{j,max} - T_a}{P_{max}} = \frac{90 - 25}{12.6} \approx 5.16\text{ K/W}$$
+> Le courant maximal reste sous la limite fixée de $1.0\text{ A}$.
 
-> **Conclusion :** Le dissipateur choisi devra présenter une résistance thermique $R_{th} \le 4\text{ K/W}$ (ou être couplé à une ventilation forcée).
+#### Puissance maximale dissipée dans la résistance ($P_{R,max}$) :
+$$P_{R,max} = \frac{V_{max}^2}{R} = \frac{(4.2)^2}{5.0} = \frac{17.64}{5} = 3.53\text{ W}$$
+
+#### Bilan de puissance & Marge de sécurité :
+* **Puissance nominale de la résistance :** $10\text{ W}$
+* **Taux d'utilisation thermique (Pire cas) :**
+$$\text{Taux d'utilisation} = \frac{3.53\text{ W}}{10\text{ W}} \times 100 \approx 35.3\%$$
+
+> **Conclusion :** La résistance de $10\text{ W}$ fonctionne avec une marge de sécurité importante ($>64\%$), ce qui limite son échauffement tout en garantissant un fonctionnement passif stable sans risque de surchauffe critique.
 
 ---
 
 ## 2. Intégration Numérique de la Capacité (Ah / Wh)
 
-La capacité cumulative est calculée par intégration du courant dans le temps. En environnement embarqué, on utilise la **méthode des trapèzes** :
+La capacité cumulative est calculée par intégration du courant mesuré en temps réel. En environnement embarqué, on utilise la **méthode des trapèzes** :
 
 $$Q(t) = \sum_{k=1}^{N} \frac{I_k + I_{k-1}}{2} \cdot \Delta t$$
 
@@ -32,8 +38,9 @@ $$\text{Capacité (mAh)} = \sum \left( \frac{I_k + I_{k-1}}{2} \right) \times \f
 
 ## 3. Mesure de la Résistance Interne (DCIR)
 
-La résistance interne continue (DCIR) est calculée par la méthode de l'impulsion de courant à $t_0$ :
+La résistance interne continue (DCIR) est calculée lors de la transition d'ouverture ou de fermeture du MOSFET :
 
-$$R_{internal} = \frac{\Delta V}{\Delta I} = \frac{V_{open\_circuit} - V_{load}}{I_{load}}$$
+$$R_{internal} = \frac{\Delta V}{\Delta I} = \frac{V_{vide} - V_{en\_charge}}{I_{mesuré}}$$
 
-* **Exemple de résolution visée :** Si $\Delta V = 50\text{ mV}$ pour $\Delta I = 2\text{ A}$, $R_{internal} = 25\text{ m}\Omega$.
+* **Exemple de calcul :** Si la tension passe de $4.10\text{ V}$ (à vide) à $3.95\text{ V}$ (sous charge à $I = 0.79\text{ A}$) :
+$$\Delta V = 0.15\text{ V} \implies R_{internal} = \frac{0.15\text{ V}}{0.79\text{ A}} \approx 190\text{ m}\Omega$$
