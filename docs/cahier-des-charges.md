@@ -10,7 +10,7 @@ Ce projet vise à concevoir un banc d'essai automatisé permettant de mesurer la
 | Parameter | Target Value |
 | :--- | :--- |
 | **Input Voltage Range** | $0.0\text{ V} - 5.0\text{ V}$ |
-| **Discharge Current Range** | $0.1\text{ A} - 3.0\text{ A}$ (adjustable) |
+| **Discharge Current Range** | $0.1\text{ A} - 1.0\text{ A}$ (adjustable) |
 | **Current Regulation Mode** | Constant Current (CC) via active load |
 | **Voltage Measurement Accuracy** | $\le \pm 10\text{ mV}$ |
 | **Current Measurement Accuracy** | $\le \pm 10\text{ mA}$ |
