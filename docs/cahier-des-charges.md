@@ -1,5 +1,4 @@
 
-# 📋 Cahier des Charges — Banc de Test de Batteries
 
 # 📋 Cahier des Charges — Banc de Test de Batteries
 
