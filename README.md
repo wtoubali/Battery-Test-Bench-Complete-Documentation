@@ -1,44 +1,30 @@
-# Battery-Test-Bench-Complete-Documentation
-## 📌 Présentation du projet
+# 🔋 Banc d'Essai & Caractérisation de Batteries Li-ion
 
-Ce projet consiste en la conception et la réalisation d'un banc de test automatisé permettant de caractériser des cellules  Li-ion 18650.
+> **Projet d'ingénierie embarquée : banc de test automatisé pour mesure de capacité (mAh / Wh), évaluation de la résistance interne (DCIR) et suivi de l'état de santé (SoH) de cellules 18650.**
 
-L'objectif principal est d'obtenir des mesures précises et répétables sur l'état de santé (*State of Health - SoH*) et la capacité réelle des batteries sous différentes contraintes de décharge.
+![Status](https://img.shields.io/badge/Statut-Phase%20de%20conception%20%26%20Spécifications-blue)
+
+---
+
+## 📌 Présentation du Projet
+
+Ce projet consiste en la conception d'un banc de test automatisé pour caractériser des cellules Li-ion (format 18650). Le système assure une décharge contrôlée à travers une résistance de puissance, mesure en temps réel les paramètres physiques ($V, I, T$) et isole physiquement la batterie via un **relais électromécanique** dès l'atteinte des seuils de sécurité.
 
 ### Objectifs clés
-* **Mesure précise** de la tension, du courant et de la température en temps réel.
-* **Décharge à courant variable ** via une résistance de puissance fixe, dimensionnée pour le courant maximal de test.
-* **Sécurité matérielle et logicielle** intégrée contre les surtensions, sous-tensions et emballements thermiques.
-* **Journalisation automatique** des données sur [carte SD / liaison série / dashboard Web].
+* **Sécurité absolue :** Isolation galvanique immédiate par relais en cas de sous-tension ($< 2{,}8\text{ V}$) ou de surchauffe ($> 60^\circ\text{C}$).
+* **Caractérisation :** Calcul de la capacité réelle par intégration numérique ($mAh$) et mesure de la résistance interne ($DCIR$).
+* **Répétabilité :** Journalisation automatique des données de décharge à $1\text{ Hz}$.
 
 ---
 
 ## 🛠️ Architecture du Système
 
-### Hardware
-* **Microcontrôleur :**  Arduino Uno 
-* **Capteurs :**
-  * Tension & Courant : INA219 
-  * Température :  DS18B20 au contact de la cellule et de la résistance de puissance.
-* **Étage de puissance & Charge active :** [ex : MOSFET de puissance N-Channel, dissipateur thermique, régulation AOP]
-* **Sécurité physique :** Relais de coupure d'urgence.
-
-### Software
-* **Langage :** C++ / Embedded C (Arduino framework / FreeRTOS)
-* **Traitement de données :** [Python (Pandas / Matplotlib) pour la génération automatique de graphiques à partir des fichiers CSV]
-
----
-
-## ⚙️ Fonctionnalités & Sécurités
-
-### 1. Modes de fonctionnement
-* **Test de capacité (Ah / Wh) :** Intégration numérique du courant dans le temps (méthode des trapèzes).
-* **Estimation de la résistance interne (DCIR) :** Mesure de la chute de tension lors d'une impulsion de courant ($\Delta V / \Delta I$).
-* **Coupure automatique (*Cut-off*) :** Arrêt immédiat dès l'atteinte de la tension minimale de sécurité (2,8V pour du Li-ion).
-
-### 2. Moteur de sécurité (*Safety Engine*)
-| Risque | Condition de déclenchement | Action corrective |
-| :--- | :--- | :--- |
-| **Sous-tension** | $V_{cell} < V_{min}$ | Ouverture du relais & arrêt décharge |
-| **Surchauffe** | $T > 60^\circ\text{C}$ | Coupure de puissance + ventilation max |
-| **Surintensité** | $I > I_{max}$ | Disjonction logicielle en $< 10\text{ ms}$ |
+```mermaid
+graph TD
+    Cellule[Cellule Li-ion 18650] -->|Tension / Courant| Capteurs[Capteur V / I]
+    Cellule -->|Température| DS18B20[Capteur Température]
+    Capteurs -->|I2C / ADC| MCU[Microcontrôleur]
+    DS18B20 -->|OneWire / ADC| MCU
+    MCU -->|Commande logique| Relais[Module Relais]
+    Relais -->|Commutation| Charge[Résistance de puissance 5 Ω / 10 W]
+    Charge -->|Boucle de décharge| Cellule
