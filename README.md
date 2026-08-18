@@ -23,7 +23,7 @@ Ce projet consiste en la conception d'un banc de test automatisé pour caractér
 * *Sondes de température :* Sondes étanches DS18B20 ($1\text{-Wire}$)
 * *Gestion de charge :* Module TP4056 (avec protection intégrée)
 * *Dissipation / Charge fictive :* Résistance de puissance $5\ \Omega$ + Relais
-* *Refroidissement :* Ventilateur $5\text{ V} / piloté
+* *Refroidissement :* Ventilateur $5\text{ V} / 12\text{ V}$ piloté
 * *Support batterie :* Support pour cellule Li-ion 18650
 
 ### 💻 Logiciels & Outils de Conception
