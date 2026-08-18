@@ -58,7 +58,7 @@ Ce projet consiste en la conception d'un banc de test automatisé pour caractér
 graph TD
     Cellule[Cellule Li-ion 18650] -->|Tension / Courant| Capteurs[Capteur V / I]
     Cellule -->|Température| DS18B20[Capteur Température]
-    Capteurs -->|I2C / ADC| MCU[Microcontrôleur]
+    Capteurs -->|I2C | MCU[Microcontrôleur]
     DS18B20 -->|OneWire / ADC| MCU
     MCU -->|Commande logique| Relais[Module Relais]
     Relais -->|Commutation| Charge[Résistance de puissance 5 Ω / 10 W]
