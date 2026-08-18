@@ -1,6 +1,6 @@
 # 📓 Journal de Bord — Banc d'Essai Batterie
 
-Ce document retrace l'historique des tests, de la conception et du développement du banc d'essai de batterie.
+Ce document retrace l'historique des tests.
 
 ---
 
