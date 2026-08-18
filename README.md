@@ -26,7 +26,7 @@ Ce projet consiste en la conception d'un banc de test automatisé pour caractér
   * Banc de décharge à courant/charge résistive piloté par relais.
 
 * *Sécurités & Protection Électronique :*
-  * Coupure automatique en sous-tension (UVLO) à $2{,}8\text{ V}$ pour éviter la dégradation chimique de la cellule Li-ion.
+  * Coupure automatique en sous-tension à $2{,}8\text{ V}$ pour éviter la dégradation chimique de la cellule Li-ion.
   * Protection contre les surchauffes avec coupure d'urgence si $T \ge 50^\circ\text{C}$.
   * Asservissement du refroidissement actif (ventilateur piloté en PWM/relais selon le seuil de température).
 
