@@ -40,7 +40,7 @@ Ce projet consiste en la conception d'un banc de test automatisé pour caractér
   
     
 ## 📌 Progression du projet 
-[Consulter le journal de bord](./JOURNAL.md)
+[Consulter le journal de bord](./docs/JOURNAL.md)
 - [x] Commander le matériel
 - [ ] Test du matériel
 - [ ] Câblage
