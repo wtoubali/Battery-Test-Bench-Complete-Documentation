@@ -32,7 +32,7 @@ Ce projet consiste en la conception d'un banc de test automatisé pour caractér
 * *Développement Firmware :* Arduino IDE 
 * *Gestion de projet & Traçabilité :* Git & GitHub
   
-## 📌 Progression du projet — Batterie banc d'essai
+## 📌 Progression du projet 
 
 - [x] Commander le matériel
 - [ ] Test du matériel
