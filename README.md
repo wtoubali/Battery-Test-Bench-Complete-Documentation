@@ -31,7 +31,7 @@ Ce projet consiste en la conception d'un banc de test automatisé pour caractér
 * *Modélisation 3D (Châssis) :* FreeCAD
 * *Développement Firmware :* Arduino IDE 
 * *Gestion de projet & Traçabilité :* Git & GitHub
-* 
+  
 ## 📌 Progression du projet — Batterie banc d'essai
 
 - [x] Commander le matériel
