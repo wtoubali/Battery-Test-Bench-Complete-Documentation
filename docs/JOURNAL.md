@@ -15,9 +15,9 @@ Ce document retrace l'historique des tests.
 - [x] Commande de l'ensemble des composants électroniques.
 - [x] Initialisation de la documentation et de la traçabilité sur GitHub.
 
-### 📄 Documents associés
-- *Cahier des charges :* [Consulter le CDC](./docs/cahier_des_charges.md)
-- *Fiche de dimensionnement :* [Voir les calculs associés](./docs/fiche_calculs.md) (dimensionnement de la charge fictive basé sur le CDC)
+### 🔗 Documents associés
+- *Fiche de calculs :* [Consulter la fiche de dimensionnement](./calculs-dimensionnement.md)
+- *Suivi des essais :* [Consulter le journal de bord](./JOURNAL.md)
 
 ---
 
