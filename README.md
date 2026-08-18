@@ -13,10 +13,6 @@
 
 Ce projet consiste en la conception d'un banc de test automatisé pour caractériser des cellules Li-ion (format 18650). Le système assure une décharge contrôlée à travers une résistance de puissance, mesure en temps réel les paramètres physiques ($V, I, T$) et isole physiquement la batterie via un **relais électromécanique** dès l'atteinte des seuils de sécurité.
 
-### Objectifs clés
-* **Sécurité absolue :** Isolation immédiate par relais en cas de sous-tension ($< 2{,}8\text{ V}$) ou de surchauffe ($> 60^\circ\text{C}$).
-* **Caractérisation :** Calcul de la capacité réelle par intégration numérique ($mAh$) et mesure de la résistance interne ($DCIR$).
-* **Répétabilité :** Journalisation automatique des données de décharge à $1\text{ Hz}$.
   
   ## 🚀 Fonctionnalités Principales
 
@@ -36,9 +32,15 @@ Ce projet consiste en la conception d'un banc de test automatisé pour caractér
 
 * *Exportation & Analyse de Données :*
   * Envoi des données de télémétrie par liaison série pour traçabilité et traçage des courbes de décharge ($V = f(t)$ et $T = f(t)$).
-  * 
+
+    ### Objectifs clés
+* **Sécurité absolue :** Isolation immédiate par relais en cas de sous-tension ($< 2{,}8\text{ V}$) ou de surchauffe ($> 60^\circ\text{C}$).
+* **Caractérisation :** Calcul de la capacité réelle par intégration numérique ($mAh$) et mesure de la résistance interne ($DCIR$).
+* **Répétabilité :** Journalisation automatique des données de décharge à $1\text{ Hz}$.
+  
+    
 ## 📌 Progression du projet 
-[Consulter le journal](./JOURNAL.md)
+[Consulter le journal de bord](./JOURNAL.md)
 - [x] Commander le matériel
 - [ ] Test du matériel
 - [ ] Câblage
