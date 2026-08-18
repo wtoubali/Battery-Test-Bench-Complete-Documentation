@@ -18,9 +18,27 @@ Ce projet consiste en la conception d'un banc de test automatisé pour caractér
 * **Caractérisation :** Calcul de la capacité réelle par intégration numérique ($mAh$) et mesure de la résistance interne ($DCIR$).
 * **Répétabilité :** Journalisation automatique des données de décharge à $1\text{ Hz}$.
   
-  
-## 📌 Progression du projet 
+  ## 🚀 Fonctionnalités Principales
 
+* *Acquisition & Métrologie en temps réel :*
+  * Mesure continue de la tension de cellule ($V$), du courant ($I$) et de la puissance ($P$) via le module INA219.
+  * Suivi thermique de la batterie par sonde étanche DS18B20 ($1\text{-Wire}$).
+  * Calcul de la capacité réelle ($\text{mAh}$) et de l'énergie restituée ($\text{Wh}$) par intégration numérique (méthode des trapèzes).
+
+* *Gestion des Cycles Charge / Décharge :*
+  * Séquençage automatique des phases : Charge complet ➔ Temps de repos (stabilisation) ➔ Décharge contrôlée.
+  * Banc de décharge à courant/charge résistive piloté par étage de puissance.
+
+* *Sécurités & Protection Électronique :*
+  * Coupure automatique en sous-tension (UVLO) à $2{,}8\text{ V}$ pour éviter la dégradation chimique de la cellule Li-ion.
+  * Protection contre les surchauffes avec coupure d'urgence si $T \ge 50^\circ\text{C}$.
+  * Asservissement du refroidissement actif (ventilateur piloté en PWM/relais selon le seuil de température).
+
+* *Exportation & Analyse de Données :*
+  * Envoi des données de télémétrie par liaison série pour traçabilité et traçage des courbes de décharge ($V = f(t)$ et $T = f(t)$).
+  * 
+## 📌 Progression du projet 
+[Consulter le journal](./JOURNAL.md)
 - [x] Commander le matériel
 - [ ] Test du matériel
 - [ ] Câblage
