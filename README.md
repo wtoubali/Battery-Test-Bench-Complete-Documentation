@@ -18,7 +18,7 @@ Ce projet consiste en la conception d'un banc de test automatisé pour caractér
 
 * *Mesures & Relevés en temps réel :*
   * Mesure continue de la tension de cellule ($V$), du courant ($I$) et de la puissance ($P$) via le module INA219.
-  * Suivi thermique de la batterie par sonde étanche DS18B20 ($1\text{-Wire}$).
+  * Suivi thermique de la batterie par sonde étanche DS18B20.
   * Calcul de la capacité réelle ($\text{mAh}$) et de l'énergie restituée ($\text{Wh}$) par intégration numérique (méthode des trapèzes).
 
 * *Gestion des Cycles Charge / Décharge :*
