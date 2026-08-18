@@ -2,7 +2,10 @@
 
 > **Projet d'ingénierie embarquée : banc de test automatisé pour mesure de capacité (mAh / Wh), évaluation de la résistance interne (DCIR) et suivi de l'état de santé (SoH) de cellules 18650.**
 
-![Status](https://img.shields.io/badge/Statut-Phase%20de%20conception%20%26%20Spécifications-blue)
+![Status](https://img.shields.io/badge/Status-En_développement-orange)
+![Arduino](https://img.shields.io/badge/Hardware-Arduino%20%2F%20ESP32-blue)
+![KiCad](https://img.shields.io/badge/EDA-KiCad-314285)
+![Licence](https://img.shields.io/badge/Licence-MIT-green)
 
 ---
 
