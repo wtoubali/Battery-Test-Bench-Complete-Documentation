@@ -31,7 +31,7 @@ Ce projet consiste en la conception d'un banc de test automatisé pour caractér
   * Asservissement du refroidissement actif (ventilateur piloté en PWM/relais selon le seuil de température).
 
 * *Exportation & Analyse de Données :*
-  * Envoi des données de télémétrie par liaison série pour traçabilité et traçage des courbes de décharge ($V = f(t)$ et $T = f(t)$).
+  * Envoi des données de télémétrie par liaison série pour traçabilité et traçage des courbes de décharge ($V = f(t)$ ).
 
     ### Objectifs clés
 * **Sécurité absolue :** Isolation immédiate par relais en cas de sous-tension ($< 2{,}8\text{ V}$) ou de surchauffe ($> 60^\circ\text{C}$).
