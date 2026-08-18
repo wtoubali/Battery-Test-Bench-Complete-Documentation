@@ -17,7 +17,7 @@ Ce document retrace l'historique des tests.
 
 ### 🔗 Documents associés
 - *Fiche de calculs :* [Consulter la fiche de dimensionnement](./calculs-dimensionnement.md)
-- *Suivi des essais :* [Consulter le journal de bord](./JOURNAL.md)
+- *Suivi des essais :* [Consulter le CDC](./cahier-des-charges.md)
 
 ---
 
