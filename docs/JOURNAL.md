@@ -16,9 +16,8 @@ Ce document retrace l'historique des tests.
 - [x] Initialisation de la documentation et de la traçabilité sur GitHub.
 
 ### 📄 Documents associés
-- [Cahier des charges (PDF)](Battery-Test-Bench-Complete-Documentation/docs
-/cahier_des_charges.md) 
-- [Fiche de calculs et dimensionnement (PDF)](./fiche_calculs.pdf) 
+- *Cahier des charges :* [Consulter le CDC](./docs/cahier_des_charges.md)
+- *Fiche de dimensionnement :* [Voir les calculs associés](./docs/fiche_calculs.md) (dimensionnement de la charge fictive basé sur le CDC)
 
 ---
 
