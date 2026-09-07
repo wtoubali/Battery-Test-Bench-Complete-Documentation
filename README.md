@@ -42,8 +42,8 @@ Ce projet consiste en la conception d'un banc de test automatisé pour caractér
 ## 📌 Progression du projet 
 [Consulter le journal de bord](./docs/JOURNAL.md)
 - [x] Commander le matériel
-- [ ] Test du matériel
-- [ ] Câblage
+- [x] Test du matériel
+- [x] Câblage
 - [ ] Création du schéma KiCad
 - [ ] Phase 1 : Charge puis décharge batterie
 - [ ] Phase 2 : Charge puis repos puis décharge de batterie
