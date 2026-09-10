@@ -44,8 +44,8 @@ Ce projet consiste en la conception d'un banc de test automatisé pour caractér
 - [x] Commander le matériel
 - [x] Test du matériel
 - [x] Câblage
-- [ ] Création du schéma KiCad
-- [ ] Phase 1 : Charge puis décharge batterie
+- [x] Création du schéma KiCad
+- [x] Phase 1 : Charge puis décharge batterie
 - [ ] Phase 2 : Charge puis repos puis décharge de batterie
 - [ ] Phase 3 : Plusieurs cycles automatiques de charges/décharges et ajout du ventilateur
 - [ ] Phase 4 : Stockage d'informations et calcul de la capacité
