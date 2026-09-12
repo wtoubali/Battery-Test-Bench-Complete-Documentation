@@ -68,7 +68,7 @@ graph TD
 ## 🛠️ Matériel & Logiciels Utilisés
 
 ### 📦 Composants Électroniques & Matériel
-* *Microcontrôleur :* Arduino / ESP32 (sélectionne celui que tu utilises)
+* *Microcontrôleur :* Arduino 
 * *Mesure de courant & tension :* Module INA219 ($I^2C$)
 * *Sondes de température :* Sondes étanches DS18B20 ($1\text{-Wire}$)
 * *Gestion de charge :* Module TP4056 (avec protection intégrée)
