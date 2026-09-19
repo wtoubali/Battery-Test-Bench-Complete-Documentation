@@ -29,8 +29,8 @@ Ce document retrace l'historique des tests.
 1. *Inspection visuelle & préparation :*
    - Étamage de la panne du fer à souder, vérification des composants reçus.
 2. *Tests unitaires sur breadboard :*
-   - [ ] Test du capteur INA219 (adresse $I^2C$, mesure de tension/courant sur charge connue).
-   - [ ] Test des sondes thermiques DS18B20 (adresse $1\text{-Wire}$, lecture température ambiante).
-   - [ ] Validation de la commande des relais et du transistor du ventilateur.
+   - [x] Test du capteur INA219 (adresse $I^2C$, mesure de tension/courant sur charge connue).
+   - [x] Test des sondes thermiques DS18B20 (adresse $1\text{-Wire}$, lecture température ambiante).
+   - [x] Validation de la commande des relais et du transistor du ventilateur.
 3. *Photos & Compte-rendu :*
    - Ajout des premières photos du montage volant sur breadboard dans docs/images/.
