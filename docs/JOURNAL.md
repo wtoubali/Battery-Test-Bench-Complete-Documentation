@@ -31,7 +31,7 @@ Ce document retrace l'historique des tests.
 2. *Tests unitaires sur breadboard :*
    - [x] Test du capteur INA219 (adresse $I^2C$, mesure de tension/courant sur charge connue).
    - [x] Test des sondes thermiques DS18B20 (adresse $1\text{-Wire}$, lecture température ambiante).
-   - [x] Validation de la commande des relais et du transistor du ventilateur.
+   - [x] Validation de la commande du relais 
   
 
 
