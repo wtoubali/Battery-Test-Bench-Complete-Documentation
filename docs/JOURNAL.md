@@ -47,6 +47,28 @@ Ce document retrace l'historique des tests.
 - [x] *Résolution de bugs d'affichage & bus I2C :* Correctif du rechargement des chronos d'affichage (dernierChronoLCD) et élimination des écrans blancs lors des transitions d'états.
 - [x] *Optimisation de la sécurité globale :* Ajustement du seuil de sous-tension à 2,50V et application d'un masque de sécurité transitoire (500-1000ms) pour éviter les faux déclenchements causés par les appels de courant au démarrage de la décharge.
 
-### 🛠️ Prochaine étape (Phase 3)
-- [ ] Implémentation du cyclage automatique (plusieurs cycles charges/décharges).
-- [ ] Gestion et asservissement du ventilateur de refroidissement.
+## 🚀 Semaine 7 : Finalisation du câblage, validation du phase 3 & Commande du PCB
+
+*Statut :* Terminé  
+*Date :* Octobre 2026
+
+---
+
+### 🛠️ Travail réalisé
+
+* *Remplacement du relais par un transistor MOSFET :* Amélioration de la réactivité, de la durée de vie du système et suppression des bruits mécaniques lors de la commutation de décharge.
+* *Finalisation du câblage global*
+* *Conception & routage du PCB sous KiCad :*
+  * Création d'un PCB double couche (FR-4, 1.6 mm) avec plan de masse global (GND) sur F.Cu et B.Cu.
+  * Élargissement des pistes de puissance (1,5 à 2,0 mm) pour supporter le courant de décharge de la batterie 18650.
+  * Ajout de perçages de fixation M3 aux 4 coins.
+  * Validation complète du test DRC (0 erreur, 0 advertissement).
+* *Mise en fabrication :* Génération des fichiers Gerber & Drill et passage de commande du PCB.
+
+---
+
+### 📌 Prochaine étape (Assemblage et courbes de decharge)
+
+* [ ] Réception et soudure des composants sur le PCB sur-mesure.
+* [ ] Validation hardware de la carte reçue.
+* [ ] Traitement des données et génération des courbes de décharge (acquisition série / export CSV / tracé).
