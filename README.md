@@ -28,7 +28,7 @@ Ce projet consiste en la conception d'un banc de test automatisé pour caractér
 * *Sécurités & Protection Électronique :*
   * Coupure automatique en sous-tension à $2{,}8\text{ V}$ pour éviter la dégradation chimique de la cellule Li-ion.
   * Protection contre les surchauffes avec coupure d'urgence si $T \ge 50^\circ\text{C}$.
-  * Asservissement du refroidissement actif (ventilateur piloté en PWM/relais selon le seuil de température).
+
 
 * *Exportation & Analyse de Données :*
   * Envoi des données de télémétrie par liaison série pour traçabilité et traçage des courbes de décharge ($V = f(t)$ ).
@@ -47,7 +47,7 @@ Ce projet consiste en la conception d'un banc de test automatisé pour caractér
 - [x] Création du schéma KiCad
 - [x] Phase 1 : Charge puis décharge batterie
 - [x] Phase 2 : Charge puis repos puis décharge de batterie
-- [ ] Phase 3 : Plusieurs cycles automatiques de charges/décharges et ajout du ventilateur
+- [x] Phase 3 : Plusieurs cycles automatiques de charges/décharges 
 - [ ] Phase 4 : Stockage d'informations et calcul de la capacité
 - [ ] Phase 5 : Création en 3D du châssis et du PCB
 ---
@@ -73,11 +73,10 @@ graph TD
 * *Sondes de température :* Sondes étanches DS18B20 ($1\text{-Wire}$)
 * *Gestion de charge :* Module TP4056 (avec protection intégrée)
 * *Dissipation / Charge fictive :* Résistance de puissance $5\ \Omega$ + Relais
-* *Refroidissement :* Ventilateur $5\text{ V}  \text{ }$ piloté
 * *Support batterie :* Support pour cellule Li-ion 18650
 
 ### 💻 Logiciels & Outils de Conception
 * *Saisie de schéma & PCB :* KiCad
-* *Modélisation 3D (Châssis) :* FreeCAD
+* *Modélisation 3D (Châssis) :* Fusion3D
 * *Développement Firmware :* Arduino IDE 
 * *Gestion de projet & Traçabilité :* Git & GitHub
