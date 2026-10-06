@@ -48,7 +48,7 @@ Ce projet consiste en la conception d'un banc de test automatisé pour caractér
 - [x] Phase 1 : Charge puis décharge batterie
 - [x] Phase 2 : Charge puis repos puis décharge de batterie
 - [x] Phase 3 : Plusieurs cycles automatiques de charges/décharges 
-- [ ] Phase 4 : Stockage d'informations et calcul de la capacité
+- [x] Phase 4 : Stockage d'informations et calcul de la capacité
 - [ ] Phase 5 : Création en 3D du châssis et du PCB
 ---
 
